@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discover Amsterdam - World Tour</title>
+  <style>
+    :root {
+      --primary-color: #6c5ce7;
+      --accent-color: #00cec9;
+      --background: #f9f9fb;
+      --text-color: #2d3436;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: var(--background);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      background: #2d3436;
+      color: #dfe6e9;
+      padding: 2rem 1rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-section h4 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .footer-section a {
+      color: #dfe6e9;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid #636e72;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore the Magic of Amsterdam</h1>
+    <p>Canals, culture, and creativity — discover the Dutch capital in style.</p>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>🌷 Did You Know?</h2>
+      <p>Amsterdam boasts more bikes than people and over 100 kilometers of canals. It’s a city where charm meets innovation, and every street has a story to tell.</p>
+    </section>
+
+    <section class="section">
+      <h2>🏨 Top-Rated Stays</h2>
+      <ul>
+        <li><strong>Hotel Pulitzer</strong> – Canal-side luxury with historic character</li>
+        <li><strong>citizenM Amsterdam South</strong> – Smart and stylish for modern travelers</li>
+        <li><strong>Hotel Not Hotel</strong> – Artistic and unconventional rooms</li>
+        <li><strong>MEININGER City West</strong> – Comfort meets affordability</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>🍽️ Amsterdam Eats</h2>
+      <ul>
+        <li>Stroopwafels – Sweet syrup-filled waffle cookies</li>
+        <li>Poffertjes – Fluffy mini pancakes dusted with sugar</li>
+        <li>Bitterballen – Dutch pub favorite with mustard dip</li>
+        <li>Haring – A traditional raw herring snack</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>🥦 Veggie-Friendly Spots</h2>
+      <ul>
+        <li><strong>De Bolhoed</strong> – Colorful, organic vegetarian plates</li>
+        <li><strong>Meatless District</strong> – Chic vegan dining with flair</li>
+        <li><strong>Hearth</strong> – Art-meets-plant-based menu</li>
+        <li><strong>Veggie Sla Huis</strong> – Healthy bowls & cozy vibes</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>🌍 World Tour</h4>
+        <p>Inspiring journeys, city by city. Travel smart, travel inspired.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="paris.html">Paris</a></p>
+        <p><a href="london.html">London</a></p>
+        <p><a href="ams.html">Amsterdam</a></p>
+        <p><a href="packages.html">Packages</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: hello@worldtour.com</p>
+        <p>Phone: +31 123 456 789</p>
+        <p>Amsterdam, Netherlands</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 World Tour. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

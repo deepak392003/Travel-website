@@ -1,111 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(-45deg, #1f1c2c, #928dab, #ff4e50, #f9d423);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-    }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #1f1c2c, #928dab, #ff4e50, #f9d423);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+      }
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 
-    .login {
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px 40px;
-      border-radius: 15px;
-      border: 1px solid red;
-      width: 350px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
-    }
+      .login {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px 40px;
+        border-radius: 15px;
+        border: 1px solid red;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+      }
 
-    .login h2 {
-      color: red;
-      margin-bottom: 20px;
-    }
+      .login h2 {
+        color: red;
+        margin-bottom: 20px;
+      }
 
-    .login button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 16px;
-      background-color: red;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-    }
+      .login button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+      }
 
-    .login button:hover {
-      background-color: darkred;
-      transform: translateY(-2px);
-    }
+      .login button:hover {
+        background-color: darkred;
+        transform: translateY(-2px);
+      }
 
-    .login input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 2px solid red;
-      border-radius: 5px;
-      background-color: rgba(0, 0, 0, 0.3);
-      color: white;
-    }
+      .login input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid red;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+      }
 
-    .login input::placeholder {
-      color: #ccc;
-    }
+      .login input::placeholder {
+        color: #ccc;
+      }
 
-    .login p {
-      margin: 15px 0 5px;
-      color: #ccc;
-    }
+      .login p {
+        margin: 15px 0 5px;
+        color: #ccc;
+      }
 
-    .login a {
-      color: red;
-      text-decoration: none;
-    }
+      .login a {
+        color: red;
+        text-decoration: none;
+      }
 
-    .login a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div class="login">
-    <h2>Login</h2>
-    <div class="page">
-      <a href="#"><button class="btn-google">Login with Google</button></a>
-      <a href="#"><button class="btn-facebook">Login with Facebook</button></a>
-      <p>or</p>
-      <form>
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <input type="password" id="password" placeholder="Enter your password" required />
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      .login a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <h2>Login</h2>
+      <div class="page">
+        <a href="#"><button class="btn-google">Login with Google</button></a>
+        <a href="#"
+          ><button class="btn-facebook">Login with Facebook</button></a
+        >
+        <p>or</p>
+        <form>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            
+          />
+          <button type="submit" id="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
     </div>
-  </div>
-</body>
+
+    <script>
+      // First we set our login form
+
+      let google = document.querySelector('.btn-google');
+      let facebook = document.querySelector('.btn-facebook');
+
+      // for google
+      google.addEventListener("click", () => {
+
+       alert("Google login button was cliced for the valiation process we use OAuth verifaction later using backend");
+      })
+      // for facebook
+      facebook.addEventListener("click", () => {
+
+       alert("facebook login button was cliced for the valiation process we use facebook verifaction later using backend");
+      })
+
+      // email and password validation
+
+      // 1.Accessing the element
+
+      let form = document.querySelector('form');
+      let email = document.querySelector('#email');
+      let pass = document.querySelector('#password');
+      let mybtn = document.querySelector('#btn');
+
+      form.addEventListener('submit', (event)=> {
+
+        let errors = [];
+
+         let emailValue = email.value;
+         let passValue = pass.value;
+
+         if(
+          !emailValue.includes('@') ||
+          !emailValue.includes('.') ||
+           emailValue.indexOf('@') === 0 ||
+            emailValue.lastIndexOf('.') < emailValue.indexOf('@') + 2 ||
+            emailValue.endsWith('.')) {
+
+              errors.push("Please Enter a valid email address");
+            }
+
+            // for password section
+
+            if(passValue.length < 6){
+              errors.push('Please Enter a valid password');
+            }
+
+            // errors
+
+            if(errors.length > 0){
+              event.preventDefault();
+              console.error(errors);
+            }
+
+            
+      })
+    </script>
+  </body>
 </html>

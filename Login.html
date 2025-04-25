@@ -154,10 +154,12 @@
 
       form.addEventListener('submit', (event)=> {
 
+        event.preventDefault();
+
         let errors = [];
 
-         let emailValue = email.value;
-         let passValue = pass.value;
+         let emailValue = email.value.trim();
+         let passValue = pass.value.trim();
 
          if(
           !emailValue.includes('@') ||
@@ -179,8 +181,30 @@
 
             if(errors.length > 0){
               event.preventDefault();
-              console.error(errors);
+              alert(errors);
             }
+            else{
+
+              alert("Your value has been stored in the localStorage");
+            }
+
+            // to store my values in the local storage
+
+            let loginPage = JSON.parse(localStorage.getItem('loginPage')) || [];
+
+            loginPage.push({
+              email : emailValue,
+              pass : passValue
+            });
+
+            localStorage.setItem('loginPage', JSON.stringify(loginPage));
+
+            // reset the login form after submisson
+
+            form.reset();
+
+            alert("you've Logged In");
+
 
             
       })

@@ -153,21 +153,21 @@
       form.addEventListener("submit", (event) => {
         let errorMessage = [];
 
-        let nameValue = Name.value;
+        let nameValue = Name.value.trim();
 
         if (nameValue.length < 4) {
           errorMessage.push("Please enter a name which have four or more char");
         }
 
         // for email
-          let emailValue = Email.value;
+          let emailValue = Email.value.trim();
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailValue)) {
           errors.push("Please enter a valid email address");
         }
 
         // for password
-         let passwordValue = Password.value;
+         let passwordValue = Password.value.trim();
         if(passwordValue < 6){
           errorMessage.push("Please enter the valid password");
         }
@@ -179,6 +179,30 @@
           event.preventDefault();
           console.log(errorMessage);
         }
+        else{
+
+          alert("save your signed data into the brower's localStorage");
+        }
+
+
+        // local storage
+
+        let signup = JSON.parse(localStorage.getItem('signup')) || [];
+
+        signup.push({
+          name : nameValue,
+          email : emailValue,
+          password : passwordValue
+        });
+
+        localStorage.setItem('signup', JSON.stringify(signup));
+
+        // reset form
+
+        form.reset();
+
+        alert("Signed Up");
+
 
       });
     </script>
